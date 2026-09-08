@@ -10,7 +10,7 @@ namespace Assignment
             // LCT01_SyntaxList();
             // LCT02_SyntaxLinkedList();
             // LCT03_SyntaxHashTable();
-            // LCT04_SyntaxDictionary();
+            LCT04_SyntaxDictionary();
         }
 
         #region Lecture
@@ -22,7 +22,25 @@ namespace Assignment
 
         public void LCT02_SyntaxLinkedList()
         {
-            throw new System.NotImplementedException();
+            //string[] playerName = new string[20];
+            LinkedList<string> linkedlist = new LinkedList<string>();
+
+            // [Node 1]
+            linkedlist.AddLast("Node 1");
+
+            // [Node 1]<-[Node 2]
+            linkedlist.AddLast("Node 2");
+
+            // [Node 0]<-[Node 1]<-[Node 2]
+            linkedlist.AddFirst("Node 0");
+
+            LinkedListNode<string> firstNode = linkedlist.First;
+            Debug.Log("first: " + firstNode.Value);
+
+            LinkedListNode<string> lastNode = linkedlist.Last;
+            Debug.Log("last: " + lastNode.Value);
+
+            Debug.Log("firstNode.Next: " + firstNode.Next.Value);
         }
 
         public void LCT03_SyntaxHashTable()
@@ -32,7 +50,8 @@ namespace Assignment
 
         public void LCT04_SyntaxDictionary()
         {
-            throw new System.NotImplementedException();
+            Dictionary<string, int> inv = new Dictionary<string, int>();
+
         }
 
         #endregion
